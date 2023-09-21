@@ -10,8 +10,11 @@ import React from 'react'
 
 const FeaturedProject = ({type, title, summary, img, link, github}) => {
   return(
-    <article className='w-full flex items-center justify-between rounded-3xl border 
-    border-solid border-dark bg-light shadow-2xl'>
+    <article className='w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border 
+    border-solid border-dark bg-light shadow-2xl p-12'>
+      <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark
+      rounded-br-3xl
+      ' />
       <Link href={link} target="_blank"
       className='w-1/2 cursor-pointer owerflow-hidden rounded-lg'
       >
@@ -20,13 +23,14 @@ const FeaturedProject = ({type, title, summary, img, link, github}) => {
 
       <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
         <span className='text-primary font-medium text-xl'>{type}</span>
-        <Link href={link} target="_blank">
+        <Link href={link} target="_blank" className='hover:underline underline-offset-2'>
           <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
         </Link>
-        <p>{summary}</p>
-        <div>
-          <Link href={github}  target="_blank"><GithubIcon /> </Link>
-          <Link href={link}  target="_blank">Visit Project </Link>
+        <p className='my-2 font-medium text-dark'>{summary}</p>
+        <div className='nt-2 flex items-center'>
+          <Link href={github}  target="_blank" className='w-10'><GithubIcon /> </Link>
+          <Link href={link}  target="_blank" className='ml-4 rounded-lg bg-dark text-light p-2 px-6
+          text-lg font-semibold'> Избранный проект </Link>
         </div>
        
       </div>
@@ -36,42 +40,96 @@ const FeaturedProject = ({type, title, summary, img, link, github}) => {
     </article>
   )
 }
+const Project = ({title, type, img, link, github})=>{
+  return(
+    <article className="w-full flex flex-col items-center justify-center rounded-2xl border 
+    border-solid border-dark bg-light p-6 relative
+    ">
+      <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
+      <Link href={link} target="_blank"
+      className='w-full cursor-pointer owerflow-hidden rounded-lg'
+      >
+         <Image src={img} alt={title} className="w-full h-auto" />
+      </Link>
+      <div className='w-full flex flex-col items-start justify-between mt-4'>
+        <span className='text-primary font-medium text-xl'>{type}</span>
+        <Link href={link} target="_blank" className='hover:underline underline-offset-2'>
+          <h2 className='my-2 w-full text-left text-3xl font-bold'>{title}</h2>
+        </Link>
+        
+        <div className='w-full nt-2 flex items-center justify-between'>
+        <Link href={link}  
+        target="_blank" 
+        className='text-lg font-semibold underline'> 
+        Избранный </Link>
+          <Link href={github}  
+          target="_blank" 
+          className='w-8'>
+            <GithubIcon /> {""}
+          </Link>
+        </div>
+      </div> 
+    </article>
+  )
+}
+
 const projects = () => {
   return (
     <>
-        <Head>
+      <Head>
 				<title>Проекты</title>
 				<meta name='description' content='any description' />
 	    </Head>
         <main className='w-full mb-16 flex flex-col items-center justify-center'>
-            <Layout className='pt-16'>
-                <AnimatedText text="Воображение превосходит знания!"/>
-
-                <div className='grid grid-cols-12 gap-24'>
+          <Layout className='pt-16'>
+              <AnimatedText text="Воображение превосходит знания!"
+              className='mb-16'
+              />
+            <div className='grid grid-cols-12 gap-24'>
                   <div className='col-span-12'>
-                  <FeaturedProject 
-                  title="Крипто-скринер"
-                  img={project1}
-                  summary="
-                  Приложение для проверки криптографии
-                  Многофункциональное приложение для проверки криптографии, использующее React, Tailwind CSS, Context API, React Router и Recharts. 
-                  В нем подробно показаны практически все криптовалюты. Вы можете легко конвертировать цену в вашей
-                  местной валюте."
-                  link="/"
-                  github="/"
-                  type="Избранный проект"
-                  
-                  
-                  />
+                    <FeaturedProject 
+                      title="Крипто-скринер"
+                      img={project1}
+                      summary="
+                      Приложение для проверки криптографии
+                      Многофункциональное приложение для проверки криптографии, использующее React, Tailwind CSS, Context API, React Router и Recharts. 
+                      В нем подробно показаны практически все криптовалюты. Вы можете легко конвертировать цену в вашей
+                      местной валюте."
+                      link="/"
+                      github="/"
+                      type="Избранный проект"
+                    />
                   </div>
                   <div className='col-span-6'>
-                    projects-1
+                    <Project 
+                      title="Крипто-скринер"
+                      img={project1}
+                      summary="
+                      Приложение для проверки криптографии
+                      Многофункциональное приложение для проверки криптографии, использующее React, Tailwind CSS, Context API, React Router и Recharts. 
+                      В нем подробно показаны практически все криптовалюты. Вы можете легко конвертировать цену в вашей
+                      местной валюте."
+                      link="/"
+                      github="/"
+                      type="Избранный проект"
+                    />
                   </div>
-                  <div className='col-span-6'>
-                    projects-2
-                  </div>
-                </div>
-            </Layout>
+              <div className='col-span-6'>
+              <Project 
+                      title="Крипто-скринер"
+                      img={project1}
+                      summary="
+                      Приложение для проверки криптографии
+                      Многофункциональное приложение для проверки криптографии, использующее React, Tailwind CSS, Context API, React Router и Recharts. 
+                      В нем подробно показаны практически все криптовалюты. Вы можете легко конвертировать цену в вашей
+                      местной валюте."
+                      link="/"
+                      github="/"
+                      type="Избранный проект"
+                    />
+              </div>
+            </div>
+          </Layout>
         </main>
     </>
   )

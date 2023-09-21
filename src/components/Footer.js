@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import Layout from './Layout'
+import React from 'react'
 
 const Footer = () => {
 	const [isLiked, setIsLiked] = useState(false)

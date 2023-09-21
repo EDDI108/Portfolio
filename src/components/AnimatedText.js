@@ -35,25 +35,24 @@ const AnimatedText = ({ text, className = '' }) => {
 	}
 
 	const formattedText = capitalizeFirstLetter(text)
-
-	return (
-		<div className='w-full mx-auto py-5 flex items-center justify-center text-center overflow-hidden'>
-			<motion.h1
-				className={`inline-block w-full text-dark font-bold text-6xl ${className}`}
-				variants={quote}
-				initial='initial'
-				animate='animate'
-			>
-				{formattedText.split(' ').map((word, index) => (
+        return (
+		    <div className='w-full mx-auto py-5 flex items-center justify-center text-center overflow-hidden'>
+			    <motion.h1
+				  className={`inline-block w-full text-dark font-bold text-6xl ${className}`}
+				  variants={quote}
+				  initial='initial'
+				  animate='animate'
+			        >
+				    {formattedText.split(' ').map((word, index) => (
 					<motion.span
-						key={word + '-' + index}
-						className='inline-block'
-						variants={singelWord}
-					>
+						  key={word + '-' + index}
+						  className='inline-block'
+						  variants={singelWord}
+					    >
 						{word}&nbsp;
 					</motion.span>
-				))}
-			</motion.h1>
+				    ))}
+			    </motion.h1>
 		</div>
 	)
 }
