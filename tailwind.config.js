@@ -8,6 +8,7 @@ export const content = [
   "./src/**/*.{js,ts,jsx,tsx,mdx}",
 ]
 export const theme = {
+  darkMode: 'class',
   extend: {
     fontFamily: {
       mont: ['var(--font-mont)', ...fontFamily.sans],

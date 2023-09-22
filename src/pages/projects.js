@@ -7,7 +7,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import project1 from "/public/images/projects/crypto-screener-cover-image.jpg"
 import React from 'react'
-
+ 
+//Эти строки для карточек проектов
+//Данный объект отвечает за большуюю и главную карточку
 const FeaturedProject = ({type, title, summary, img, link, github}) => {
   return(
     <article className='w-full flex items-center justify-between relative rounded-br-2xl rounded-3xl border 
@@ -21,7 +23,7 @@ const FeaturedProject = ({type, title, summary, img, link, github}) => {
          <Image src={img} alt={title} className="w-full h-auto" />
       </Link>
 
-      <div className='w-1/2 flex flex-col items-start justify-between pl-6'>
+      <div className='w-1/2 flex flex-col items-start justify-between pl-6'>                                   
         <span className='text-primary font-medium text-xl'>{type}</span>
         <Link href={link} target="_blank" className='hover:underline underline-offset-2'>
           <h2 className='my-2 w-full text-left text-4xl font-bold'>{title}</h2>
@@ -32,14 +34,11 @@ const FeaturedProject = ({type, title, summary, img, link, github}) => {
           <Link href={link}  target="_blank" className='ml-4 rounded-lg bg-dark text-light p-2 px-6
           text-lg font-semibold'> Избранный проект </Link>
         </div>
-       
       </div>
-      
-    
-    
     </article>
   )
 }
+//эти объекты отвечают за маленькие карточки
 const Project = ({title, type, img, link, github})=>{
   return(
     <article className="w-full flex flex-col items-center justify-center rounded-2xl border 
