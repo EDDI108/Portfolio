@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { GithubIcon, VkIcon } from './Icons'
+import { GithubIcon, VkIcon, SunIcon, MoonIcon } from './Icons'
 import Logo from './Logo'
 import useThemeSwitcher from './hooks/useThemeSwitcher'
 
@@ -60,7 +60,7 @@ const NavBar = () => {
 			 >
                 {
 					mode === "dark" ?
-					<SunnIcon className={"fill-dark"} />
+					<SunIcon className={"fill-dark"} />
 					: <MoonIcon className={"fill-dark"} />
 				}
 			 </button>
@@ -70,7 +70,7 @@ const NavBar = () => {
 				<Logo />
 			</div>
 		</header>
-	)
-}
+	);
+};
 
-export default NavBar
+export default NavBar;

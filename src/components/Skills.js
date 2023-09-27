@@ -24,7 +24,7 @@ const Skills = () => {
 			<div className='w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight'>
 				<motion.div
 					className='flex items-center justify-center rounded-full font-semibold bg-dark text-light
-				  p-8 shadow-dark'
+				  p-8 shadow-dark cursor-pointer'
 					whileHover={{ scale: 1.01 }}
 				>
 					Web

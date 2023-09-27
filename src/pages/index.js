@@ -43,11 +43,11 @@ export default function Home() {
 									Резюме <LinkArrow className={'w-6 ml-1'} />
 								</Link>
 								<Link
-									href='mailto:https://mail.google.com/mail/u/0/#inbox'
+									href='mailto:omarowsky.e@gmail.com'
 									target={'_blank'}
 									className='ml-4 mt-3 text-lg font-medium capitalize text-dark underline'
 								>
-									Контакт
+									Связаться со мной
 								</Link>
 							</div>
 						</div>
