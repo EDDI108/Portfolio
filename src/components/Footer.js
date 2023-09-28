@@ -10,13 +10,15 @@ const Footer = () => {
 		setIsLiked(!isLiked)
 	}
     return (
-		<footer className='w-full border-t-2 border-solid border-dark font-medium text-lg'>
+		<footer className='w-full border-t-2 border-solid border-dark font-medium text-lg
+		dark:text-light dark:border-light
+		'>
 			<Layout className='py-8 flex items-center justify-between'>
 				<span>{new Date().getFullYear()} &copy; Все права защищены.</span>
 				<div className='flex items-center'>
 					Если вам нравится поставьте
 					<span
-						className='text-darc text-2xl px-1 cursor-pointer'
+						className='text-primary dark:txt-primaryDark text-2xl px-1 cursor-pointer'
 						onClick={handleLikeClick}
 					>
 						<svg

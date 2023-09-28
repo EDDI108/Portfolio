@@ -5,7 +5,7 @@ import Layout from '@/components/Layout'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import project1 from "/public/images/projects/crypto-screener-cover-image.jpg"
+import project1 from "/public/image/projects/crypto-screener-cover-image.jpg"
 import React from 'react'
  
 //Эти строки для карточек проектов

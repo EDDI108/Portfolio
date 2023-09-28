@@ -36,9 +36,9 @@ const AnimatedText = ({ text, className = '' }) => {
 
 	const formattedText = capitalizeFirstLetter(text)
         return (
-		    <div className='w-full mx-auto py-5 flex items-center justify-center text-center overflow-hidden'>
+		    <div className='w-full mx-auto py-5 flex items-center justify-center text-center overflow-hidden '>
 			    <motion.h1
-				  className={`inline-block w-full text-dark font-bold text-6xl ${className}`}
+				  className={`inline-block w-full text-dark font-bold text-6xl dark:text-light ${className}`}
 				  variants={quote}
 				  initial='initial'
 				  animate='animate'

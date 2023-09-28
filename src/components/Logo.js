@@ -9,8 +9,10 @@ function Logo({ mode }) {
     <div className='flex items-center justify-center mt-2'>
       <motion.div whileHover={{ scale: 1.5 }}>
         <MotionImage 
-          src={mode === "dark" ? "/images/profile/LogoDark.png" : "/images/profile/LogoLight.png"}
-          alt="Мой Логотип" width={100} height={100} 
+        src={mode === "dark" ? "/image/profile/LogoDark.png" : "/image/profile/LogoLight.png"}
+          alt="Мой Логотип" 
+          width={100} 
+          height={100} 
         />
         
       </motion.div>

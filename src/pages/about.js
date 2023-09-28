@@ -3,7 +3,7 @@ import Layout from '@/components/Layout'
 import Skills from '@/components/Skills'
 import Head from 'next/head'
 import Image from 'next/image'
-import profilePic from '../../public/images/profile/profilePic.jpg'
+import profilePic from '../../public/image/profile/profilePic.jpg'
 import React from 'react'
 
 const about = () => {
@@ -13,7 +13,7 @@ const about = () => {
 				<title>Обо мне</title>
 				<meta name='description' content='any description' />
 			</Head>
-			<main className='flex w-full flex-col items-center justify-center'>
+			<main className='flex w-full flex-col items-center justify-center dark:text-light'>
 				<Layout className='pt-16'>
 					<AnimatedText
 						text='Страсть питает цель!'
