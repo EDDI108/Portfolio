@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { GithubIcon, VkIcon, SunIcon, MoonIcon } from './Icons'
+import { GithubIcon, VkIcon} from './Icons'
 import Logo from './Logo'
-import useThemeSwitcher from './hooks/useThemeSwitcher'
+
 
 //Обычная навигацияы
 const CustomLink = ({ href, title, className = '' }) => {
@@ -35,7 +35,7 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
 	
 	
 	return (
-		<buton href={href} className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>
+		<button href={href} className={`${className} relative group text-light dark:text-dark my-2`} onClick={handleClick}>
 			{title}
 			<span
 				className={`h-[1px] inline-block bg-light absolute left-0 -bottom-0.5
@@ -46,19 +46,19 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
 			>
 				&nbsp;
 			</span>
-		</buton>
+		</button>
 	)
 };
 
 const NavBar = () => {
 
-     const[mode, setMode] = useThemeSwitcher();
-	 const[isOpen, setIsOpen] = useState(false);
+     
+	 const[isOpen, setIsOpen] = useState();
 
 	 const handleClick = () => {
 		setIsOpen(!isOpen)
 	 }
-//Далее ниже идет панель навигации для Mobile
+ //Далее ниже идет панель навигации для Mobile
 	return (
 		<header className='w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16
 		md:px-12 sm:px-8'>
@@ -67,12 +67,12 @@ const NavBar = () => {
 			  <span className={`bg-dark dark:bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
 			  <span className={`bg-dark dark:bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
 			  <span className={`bg-dark dark:bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm  ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'} `}></span>
-            </button>
+      </button>
 			<div className="w-full flex justify-between items-center lg:hidden">
 			    <nav>
-				  <CustomLink href='/' title='Главная' className='mr-4' />
-				  <CustomLink href='/about' title='Обо мне' className='mx-4' />
-				  <CustomLink href='/projects' title='Проекты' className='mx-4' />
+				    <CustomLink href='/' title='Главная' className='mr-4' />
+				    <CustomLink href='/about' title='Обо мне' className='mx-4' />
+				    <CustomLink href='/projects' title='Проекты' className='mx-4' />
 			    </nav>
 
 			    <nav className='flex items-center justify-center flex-wrap'>
@@ -80,7 +80,7 @@ const NavBar = () => {
 					   href='https://vk.com'
 					   target={'_blank'}
 					   whileTap={{ scale: 0.9 }}
-					   className='w-6 mr-3'
+					   className="w-6 mr-3"
 					   whileHover={{ y: -2 }}
 				      >
 					  <VkIcon />
@@ -95,24 +95,13 @@ const NavBar = () => {
 					<GithubIcon />
 				</motion.a>
 			
-			    <button
-			    onClick={() => setMode(mode === "light" ? "dark" : "light") } 
-			    className={`ml-3 flex items-center justify-center rounded-full p-1
-			    ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-			    `}
-			    >
-                {
-					mode === "dark" ?
-					<SunIcon className={"fill-dark"} />
-					: <MoonIcon className={"fill-dark"} />
-				}
-			    </button>
+			
 			
 			    </nav>
             </div>
 			 
             {
-				isOpen ?
+				       isOpen ?
                  <motion.div 
 				 initial={{scale:0, opacity:0, x: "-50%", y: "-50%"}}
 				 animate={{scale:1, opacity:1}}
@@ -145,18 +134,7 @@ const NavBar = () => {
 						<GithubIcon />
 					</motion.a>
 				
-					<button
-					onClick={() => setMode(mode === "light" ? "dark" : "light") } 
-					className={`ml-3 flex items-center justify-center rounded-full p-1
-					${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-					`}
-					>
-					{
-						mode === "dark" ?
-						<SunIcon className={"fill-dark"} />
-						: <MoonIcon className={"fill-dark"} />
-					}
-					</button>
+					
 				
 					</nav>
 				</motion.div>
