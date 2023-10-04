@@ -18,7 +18,7 @@ export default function Home() {
 			<main className='flex items-center text-dark w-full min-h-screen dark:text-light'>
 				<Layout className='pt-0 md:p-16 sm:pt-8'>
 					<div className='flex items-center justify-between w-full lg:flex-col'>
-						<div className='w-3/12 ml-20 md:w-full'>
+						<div className='w-2/2 ml-5 md:w-full'>
 							<Image src={profilePic} alt="" className='w-full h-auto lg:hidden md:inline-block md:w-full' 
 							priority
 							sizes="(max-width: 768px) 100vw,
@@ -29,7 +29,7 @@ export default function Home() {
 						<div className='w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center'>
 							<AnimatedText
 								text='Привет, рад видеть вас на моей странице.'
-								className='text-5xl text-left'
+								className='text-5xl text-left xl:!text-5xl lg:!text-center lg:!text=5xl md:!text-5xl sm:!text-3xl'
 							/>
 							<p className='my-2 text-base font-medium md:text-sm sm:text-xs'>
 								Как опытный разработчик, я стремлюсь воплощать идеи в

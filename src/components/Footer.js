@@ -17,8 +17,9 @@ const Footer = () => {
 				<span>{new Date().getFullYear()} &copy; Все права защищены.</span>
 				<div className='flex items-center lg:py-2'>
 					Если вам нравится поставьте
+
 					<span
-						className='text-primary dark:txt-primaryDark text-2xl px-1 cursor-pointer'
+						className='text-dark dark:txt-primary text-2xl px-1 cursor-pointer'  //выяснить как это исправить?
 						onClick={handleLikeClick}
 					>
 						<svg

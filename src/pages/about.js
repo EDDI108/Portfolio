@@ -19,7 +19,7 @@ const about = () => {
 						text='Страсть питает цель!'
 						className='font-serif mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8'
 					/>
-					<div className='grid w-full grid-cols-11 gap-35 sm:gap-8'>
+					<div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
 						<div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
 							<h2 className='mb-12 text-3xl font-bold uppercase text-dark/75 dark:text-light/75 xl:text-center 
 							md:text-lg sm:text-base xs:text-sm mt-20'>
@@ -47,15 +47,16 @@ const about = () => {
 							</p>
 						</div>
 						<div className='col-span-5 relative h-max rounded-2x1 border-solid border-dark bg-light 
-						p-8 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8'>
+						    p-8 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8'>
 							<Image
 								src={profilePic}
 								alt='Me'
-								className='w-full h-auto rounded-3xl'
+								className='rait-full w-full h-auto rounded-2xl'
 								priority
-							sizes="(max-width: 768px) 100vw,
+							    sizes="(max-width: 768px) 100vw,
 							       (max-width: 1200px) 50vw,
 							         33vw"
+								style={{ maxWidth: '100%'  }}
 									
 							/>
 						</div>
