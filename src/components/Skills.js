@@ -22,7 +22,7 @@ const Skill = ({ name, x, y }) => {
 const Skills = () => {
 	return (
 		<>
-			<h2 className="font-bold text-5xl mt-50 w-full text-center md:text-6xl md:mt-32">Skills</h2>
+			<h2 className="font-bold text-7xl mt-50 w-full text-center md:text-5xl md:mt-32">Skills</h2>
 			<div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
 			lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
 			lg:bg-circularLightLg lg:dark:bg-circularDarkLg
@@ -37,21 +37,22 @@ const Skills = () => {
 				>
 					Web
 				</motion.div>
-				<Skill name='HTML' x='-28vw' y='-18vw' />
-                <Skill name='CSS' x='20vw' y='-18vw' />
-				<Skill name='JavaScript' x='-0vw' y='-21vw' />
-				<Skill name='TypeScript' x='-20vw' y='-11vw' />
-				<Skill name='Git' x='11vw' y='-5vw' />
-				<Skill name='Figma' x='0vw' y='-11vw' />
-				<Skill name='React.js' x='-38vw' y='-4vw' />
-				<Skill name= 'React Native' x='-17vw' y='-4vw' />
-				<Skill name='Vue.js' x='28vw' y='-5vw' />
-				<Skill name='NextJS' x='20vw' y='-11vw' />
-				<Skill name='Node.JS' x='-18vw' y='5vw' />
-				<Skill name='MongoDB' x='-14vw' y='14vw' />
-				<Skill name='Rest' x='9vw' y='16vw' />
-				<Skill name='Unit test' x='16vw' y='4vw' />
-				<Skill name='Docker' x='0vw' y='23vw' />
+				<Skill name='Frontend' x='0vw' y='-23vw' />
+				<Skill name='HTML' x='-20vw' y='-16vw' />
+                <Skill name='CSS' x='26vw' y='-18vw' />
+				<Skill name='JavaScript' x='2vw' y='-15vw' />
+				<Skill name='TypeScript' x='-30vw' y='-11vw' />
+				<Skill name='Git' x='30vw' y='-5vw' />
+				<Skill name='Figma' x='23vw' y='-12vw' />
+				<Skill name='React' x='-36vw' y='-4vw' />
+				<Skill name= 'React Native' x='-10vw' y='-6vw' />
+				<Skill name='Vue.js' x='17vw' y='-5vw' />
+				<Skill name='Backend' x='0vw' y='7vw' />
+				<Skill name='Node.JS' x='-20vw' y='11vw' />
+				<Skill name='MongoDB' x='-12vw' y='19vw' />
+				<Skill name='Rest' x='12vw' y='18vw' />
+				<Skill name='Unit test' x='18vw' y='12vw' />
+				<Skill name='Docker' x='0vw' y='25vw' />
 			</div>
 		</>
 	);
