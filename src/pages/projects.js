@@ -137,7 +137,7 @@ const projects = () => {
                   Многофункциональное приложение для проверки криптографии, использующее React, Tailwind CSS, Context API, React Router и Recharts. 
                   В нем подробно показаны практически все криптовалюты. Вы можете легко конвертировать цену в вашей
                   местной валюте."
-                link="/"
+                link="https://crypto-screener-rho.vercel.app/"
                 github="/"
                 type="Избранный проект"
               />
