@@ -138,7 +138,7 @@ const projects = () => {
                   В нем подробно показаны практически все криптовалюты. Вы можете легко конвертировать цену в вашей
                   местной валюте."
                 link="https://crypto-screener-rho.vercel.app/"
-                github="/"
+                github="https://github.com/EDDI108/CryptoScreener"
                 type="Избранный проект"
               />
             </div>
