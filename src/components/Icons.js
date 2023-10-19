@@ -70,20 +70,20 @@ export const LinkArrow = ({ className, ...rest }) => (
 
 export const CircularText = ({ className, ...rest }) => (
 	<svg xmlns="http://www.w3.org/2000/svg"
-      width="250pt" 
-      height="250pt" 
+      width="200pt" 
+      height="200pt" 
       viewBox="0 0 250 250"
       xmlSpace='preserve'
 		className={`w-full h-auto ${className}`}
 		{...rest}
 >
 
-<g transform="translate(250, 250)">
+<g transform="translate(200, 200)">
    <animateTransform
     attributeName="transform"
     type="rotate"
     from="0 50 50"   /* Начальный угол вращения */
-    to="360 50 50"   /* Конечный угол вращения */
+    to="30 50 50"   /* Конечный угол вращения */
     dur="5s"
     repeatCount="indefinite"
   />

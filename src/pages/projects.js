@@ -144,13 +144,9 @@ const projects = () => {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project 
-                title="Крипто-скринер"
+                title=""
                 img={project1}
-                summary="
-                  Приложение для проверки криптографии
-                  Многофункциональное приложение для проверки криптографии, использующее React, Tailwind CSS, Context API, React Router и Recharts. 
-                  В нем подробно показаны практически все криптовалюты. Вы можете легко конвертировать цену в вашей
-                  местной валюте."
+                summary=""
                 link="/"
                 github="/"
                 type="Избранный проект"
@@ -158,13 +154,9 @@ const projects = () => {
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project 
-                title="Крипто-скринер"
+                title=""
                 img={project1}
-                summary="
-                  Приложение для проверки криптографии
-                  Многофункциональное приложение для проверки криптографии, использующее React, Tailwind CSS, Context API, React Router и Recharts. 
-                  В нем подробно показаны практически все криптовалюты. Вы можете легко конвертировать цену в вашей
-                  местной валюте."
+                summary=""
                 link="/"
                 github="/"
                 type="Избранный проект"
