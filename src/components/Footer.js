@@ -19,7 +19,7 @@ const Footer = () => {
 					Если вам нравится поставьте
 
 					<span
-						className='text-dark dark:txt-primary text-2xl px-1 cursor-pointer'  //выяснить как это исправить?
+						className='text-dark dark:text-secondary text-2xl px-1 cursor-pointer'  //выяснить как это исправить?
 						onClick={handleLikeClick}
 					>
 						<svg
