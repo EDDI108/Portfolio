@@ -19,13 +19,14 @@ const Footer = () => {
 					Если вам нравится поставьте
 
 					<span
-						className='text-dark dark:text-secondary text-2xl px-1 cursor-pointer'  //выяснить как это исправить?
+						className='text-#048AA8 dark:text-secondary text-2xl px-1 cursor-pointer'  //выяснить как это исправить?
 						onClick={handleLikeClick}
 					>
 						<svg
 							viewBox='0 0 28 28'
-							fill={isLiked ? 'primary' : 'none'}
-							stroke={isLiked ? 'primary' : 'currentColor'}
+							fill={isLiked ? '#048AA8' : 'none'}
+							stroke={isLiked ? '#048AA8' : 'currentColor'}
+							style={{ color: '#048AA8' }}
 							strokeWidth='2'
 							strokeLinecap='round'
 							strokeLinejoin='round'
