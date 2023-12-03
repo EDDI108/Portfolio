@@ -53,21 +53,22 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
 const NavBar = () => {
 
      
-	 const[isOpen, setIsOpen] = useState();
+	 const[isOpen, setIsOpen] = useState(false);
 
-	 const handleClick = () => {
-		setIsOpen(!isOpen)
-	 }
+	 const handleClick = (e) => {
+		e.stopPropagation();
+		setIsOpen(!isOpen);
+	}
  //Далее ниже идет панель навигации для Mobile
 	return (
 		<header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16
-		md:px-12 sm:px-8">
+		   md:px-12 sm:px-8">
 			
 			<button className="flex-col justify-center items-center hidden lg:flex" onClick={handleClick}>
 			  <span className={`bg-dark dark:bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
 			  <span className={`bg-dark dark:bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
 			  <span className={`bg-dark dark:bg-light block transition-all duration-300 h-0.5 w-6 rounded-sm  ${isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'} `}></span>
-      </button>
+            </button>
 			<div className="w-full flex justify-between items-center lg:hidden">
 			    <nav>
 				    <CustomLink href='/' title='Главная' className='mr-4' />
@@ -85,15 +86,15 @@ const NavBar = () => {
 				      >
 					  <VkIcon />
 				    </motion.a>
-				<motion.a
-					href='https://github.com'
-					target={'_blank'}
-					whileTap={{ scale: 0.9 }}
-					className="w-6 mr-3"
-					whileHover={{ y: -2 }}
+				    <motion.a
+					   href='https://github.com'
+					   target={'_blank'}
+					   whileTap={{ scale: 0.9 }}
+					   className="w-6 mr-3"
+					   whileHover={{ y: -2 }}
 				    >
-					<GithubIcon />
-				</motion.a>
+					 <GithubIcon />
+				    </motion.a>
 			
 			
 			

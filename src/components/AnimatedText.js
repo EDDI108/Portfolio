@@ -1,7 +1,7 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const quote = {
+const quoteVariants = {
   initial: {
     opacity: 0,
   },
@@ -12,9 +12,9 @@ const quote = {
       staggerChildren: 0.08,
     },
   },
-}
+};
 
-const singelWord = {
+const wordVariants = {
   initial: {
     opacity: 0,
     y: 50,
@@ -26,14 +26,14 @@ const singelWord = {
       duration: 1,
     },
   },
-}
+};
 
 const AnimatedText = ({ text, className = '' }) => {
   return (
     <div className='w-full mx-auto py-5 flex items-center justify-center text-center overflow-hidden sm:py-0'>
       <motion.h1
         className={`inline-block w-full text-dark font-bold text-6xl dark:text-light ${className}`}
-        variants={quote}
+        variants={quoteVariants}
         initial='initial'
         animate='animate'
       >
@@ -41,14 +41,14 @@ const AnimatedText = ({ text, className = '' }) => {
           <motion.span
             key={word + '-' + index}
             className='inline-block'
-            variants={singelWord}
+            variants={wordVariants}
           >
             {word}&nbsp;
           </motion.span>
         ))}
       </motion.h1>
     </div>
-  )
-}
+  );
+};
 
-export default AnimatedText
+export default AnimatedText;
