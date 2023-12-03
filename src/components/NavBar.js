@@ -55,10 +55,9 @@ const NavBar = () => {
      
 	 const[isOpen, setIsOpen] = useState(false);
 
-	 const handleClick = (e) => {
-		e.stopPropagation();
-		setIsOpen(!isOpen);
-	}
+	 const handleClick = () => {
+		setIsOpen(!isOpen)
+	 }
  //Далее ниже идет панель навигации для Mobile
 	return (
 		<header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16
